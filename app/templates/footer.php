@@ -3,21 +3,21 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="poweroff-modal-label">Turn off the player</h4>
+                <h4 class="modal-title" id="poweroff-modal-label">Eteindre le lecteur</h4>
             </div>
             <div class="modal-body txtmid">
-                <button id="syscmd-poweroff" name="syscmd" value="poweroff" class="btn btn-primary btn-lg btn-block" data-dismiss="modal"><i class="fa fa-power-off sx"></i> Power off</button>
+                <button id="syscmd-poweroff" name="syscmd" value="poweroff" class="btn btn-primary btn-lg btn-block" data-dismiss="modal"><i class="fa fa-power-off sx"></i> Eteindre</button>
                 &nbsp;
-                <button id="syscmd-reboot" name="syscmd" value="reboot" class="btn btn-primary btn-lg btn-block" data-dismiss="modal"><i class="fa fa-refresh sx"></i> Reboot</button>
+                <button id="syscmd-reboot" name="syscmd" value="reboot" class="btn btn-primary btn-lg btn-block" data-dismiss="modal"><i class="fa fa-refresh sx"></i> Redémarrer</button>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-default btn-lg" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-default btn-lg" data-dismiss="modal" aria-hidden="true">Annuler</button>
             </div>
         </div>
     </div>
 </div>
 <!-- loader -->
-<div id="loader"<?php if ($this->section == 'dev') { ?> class="hide"<?php } ?>><div id="loaderbg"></div><div id="loadercontent"><i class="fa fa-refresh fa-spin"></i>connecting...</div></div>
+<div id="loader"<?php if ($this->section == 'dev') { ?> class="hide"<?php } ?>><div id="loaderbg"></div><div id="loadercontent"><i class="fa fa-refresh fa-spin"></i>connexion en cours...</div></div>
 <script src="<?=$this->asset('/js/vendor/jquery-2.1.0.min.js')?>"></script>
 <script src="<?=$this->asset('/js/vendor/pushstream.min.js')?>"></script>
 <script src="<?=$this->asset('/js/vendor/bootstrap.min.js')?>"></script>
