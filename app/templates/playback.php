@@ -2,28 +2,30 @@
     <!-- PLAYBACK PANEL -->
     <div id="playback" class="tab-pane active">
         <div class="container-fluid">
-			<span id="currentartist"><i class="fa fa-spinner fa-spin"></i></span>
-            <span id="currentsong"><i class="fa fa-spinner fa-spin"></i></span>
-            <span id="currentalbum"><i class="fa fa-spinner fa-spin"></i></span>
-			<div id="overlay-playsource-open" title="Changer la source de lecture" <?php if ($this->spotify === '0'): ?>class="disabled"<?php endif; ?>>
-				<span id="playlist-position"><button class="btn btn-default btn-xs">MPD</button><span></span></span>
-				<span id="format-bitrate"><i class="fa fa-spinner fa-spin"></i></span>
-			</div>
             <div class="knobs row">
-                <div id="time-knob" class="col-sm-<?=($this->colspan)-3 ?>">
-                    <input id="time" value="0" data-width="230" data-height="230" data-bgColor="#34495E" data-fgcolor="#0095D8" data-thickness="0.30" data-min="0" data-max="1000" data-displayInput="false" data-displayPrevious="true">
-                    <span id="countdown-display"><i class="fa fa-spinner fa-spin"></i></span>
-                    <span id="total"><i class="fa fa-spinner fa-spin"></i></span>
-                </div>
-                <?php if ($this->coverart == 1): ?>
-                <div class="col-sm-<?=($this->colspan)+3 ?> coverart">
-                    <img id="cover-art" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="transparent-square">
-                    <div class="btn-group">
+                <div id="song-knob" class="col-sm-6">
+                    <span id="currentartist"><i class="fa fa-spinner fa-spin"></i></span>
+                    <span id="currentsong"><i class="fa fa-spinner fa-spin"></i></span>
+                    <span id="currentalbum"><i class="fa fa-spinner fa-spin"></i></span>
+                    <div id="overlay-playsource-open" title="Changer la source de lecture" <?php if ($this->spotify === '0'): ?>class="disabled"<?php endif; ?>>
+                        <span id="playlist-position"><button class="btn btn-default btn-xs">MPD</button><span></span></span>
+                        <span id="format-bitrate"><i class="fa fa-spinner fa-spin"></i></span>
+                    </div>
+                    <div id="song-buttons" class="btn-group">
                         <button id="repeat" class="btn btn-default btn-lg btn-cmd btn-toggle" type="button" title="Lecture en boucle" data-cmd="repeat"><i class="fa fa-repeat"></i></button>
                         <button id="random" class="btn btn-default btn-lg btn-cmd btn-toggle" type="button" title="Lecture aléatoire" data-cmd="random"><i class="fa fa-random"></i></button>
                         <button id="single" class="btn btn-default btn-lg btn-cmd btn-toggle <?php if ($this->activePlayer === 'Spotify'): ?>disabled<?php endif; ?>" type="button" title="Répéter ce titre" data-cmd="single"><i class="fa fa-refresh"></i></button>
                         <!--<button type="button" id="consume" class="btn btn-default btn-lg btn-cmd btn-toggle" title="Consume Mode" data-cmd="consume"><i class="fa fa-compress"></i></button>-->
                     </div>
+                </div>
+                <!--div id="time-knob" class="col-sm-<?=($this->colspan)-3 ?>">
+                    <input id="time" value="0" data-width="230" data-height="230" data-bgColor="#34495E" data-fgcolor="#0095D8" data-thickness="0.30" data-min="0" data-max="1000" data-displayInput="false" data-displayPrevious="true">
+                    <span id="countdown-display"><i class="fa fa-spinner fa-spin"></i></span>
+                    <span id="total"><i class="fa fa-spinner fa-spin"></i></span>
+                </div-->
+                <?php if ($this->coverart == 1): ?>
+                <div class="col-sm-6 coverart">
+                    <img id="cover-art" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="transparent-square">
                     <!--<a href="#" id="overlay-playsource-open" class="btn btn-default" title="Play source">MPD</a>-->
                 </div>
                 <?php endif ?>
