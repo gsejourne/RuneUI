@@ -168,8 +168,9 @@ html, body {
 }
 #menu-top .dropdown-menu &>li &>a,
 #context-menus .dropdown-menu &>li &>a {
-    line-height: 40px;
+    line-height: 60px;
     margin: 0;
+    font-size: 20px;
     padding: 0 10px;
     background: @brand-alt;
     border-bottom: 1px solid darken(@brand-alt, 10%);
@@ -245,16 +246,18 @@ html, body {
 
 #menu-bottom {
     .fixed-menu;
+    height: 80px;
+    line-height: 80px;
     bottom: 0;
     a {
         display: block;
         float: left;
         width: 33.333%;
-        line-height: 40px;
+        line-height: 80px;
         margin: 0;
         padding: 0;
         background: @brand-alt;
-        font-size: 14px;
+        font-size: 38px;
         text-decoration: none;
         text-align: center;
         color: @text-color;
@@ -275,10 +278,10 @@ html, body {
         padding: 0;
     }
     i {
-        width: 14px;
-        line-height: 16px;
-        margin-right: 5px;
-        font-size: 14px;
+        width: 36px;
+        line-height: 80px;
+        margin-right: 10px;
+        font-size: 38px;
     }
 }
 #menu-bottom a:hover, #menu-bottom a:focus {
@@ -558,7 +561,7 @@ html, body {
 .list-li {
     display: block;
     // position: relative;
-    height: 49px;
+    height: 79px;
     line-height: 19px;
     // margin: 0;
     // background: @body-bg;
@@ -592,8 +595,8 @@ html, body {
     position: relative;
     width: 50px;
     height: 49px;
-    line-height: 49px;
-    font-size: 18px;
+    line-height: 79px;
+    font-size: 24px;
     font-weight: normal;
     text-align: center;
     color: @text-color;
@@ -635,7 +638,7 @@ html, body {
         }
     }
     .db-folder, .db-album, .db-artist {
-        line-height: 49px;
+        line-height: 79px;
         span {
             display: block;
             padding-left: 10px;
@@ -1621,9 +1624,9 @@ ul.parsley-error-list {
         margin: 0 0 0 -90px;
     }
     #menu-bottom li a {
-        font-size: 16px;
+        font-size: 38px;
         i {
-            margin-right: 10px;
+            margin-right: 20px;
         }
     }
     #database-entries {
@@ -1647,6 +1650,7 @@ ul.parsley-error-list {
         .fa-folder-open, .fa-hdd-o, .fa-dot-circle-o, .fa-user, .fa-tags {
             display: inline-block;
             width: 24px;
+            font-size: 24px;
             margin-left: 12px;
             margin-right: 8px;
             color: @brand-alt;
